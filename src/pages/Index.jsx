@@ -35,7 +35,7 @@ export function loader() {
       id: 5,
       nombre: "Pedro",
       telefono: 3472625897,
-      email: "pedro@juan.com",
+      email: "pedro@Yahoo.com",
       empresa: "Bertoto Boglione",
     },
     {
