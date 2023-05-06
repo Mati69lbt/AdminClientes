@@ -7,9 +7,18 @@ export async function action({ request }) {
 
   const datos = Object.fromEntries(formData);
 
+  const email = formData.get("email");
+
   const errores = [];
   if (Object.values(datos).includes("")) {
     errores.push("Todos los Datos son Obligatorios");
+  }
+
+  let regex = new RegExp(
+    "([!#-'*+/-9=?A-Z^-~-]+(.[!#-'*+/-9=?A-Z^-~-]+)*|\"([]!#-[^-~ \t]|(\\[\t -~]))+\")@([!#-'*+/-9=?A-Z^-~-]+(.[!#-'*+/-9=?A-Z^-~-]+)*|[[\t -Z^-~]*])"
+  );
+  if (!regex.test(email)) {
+    errores.push("Email Invalido");
   }
 
   if (Object.keys(errores).length) {
