@@ -1,17 +1,25 @@
-import { Form, useNavigate } from "react-router-dom";
+import { Form, useActionData, useNavigate } from "react-router-dom";
+import Error from "../components/Error";
 import Formulario from "../components/Formulario";
 
 export async function action({ request }) {
   const formData = await request.formData();
 
   const datos = Object.fromEntries(formData);
-  console.log(datos);
 
-  return null;
+  const errores = [];
+  if (Object.values(datos).includes("")) {
+    errores.push("Todos los Datos son Obligatorios");
+  }
+
+  if (Object.keys(errores).length) {
+    return errores;
+  }
 }
 
 const NuevoCliente = () => {
   const navigate = useNavigate();
+  const errores = useActionData();
 
   return (
     <>
@@ -28,6 +36,9 @@ const NuevoCliente = () => {
         </button>
       </div>
       <div className="bg-white shadow rounded-md md:w-3/4 mx-auto px-5 py-10 mt-5">
+        {errores?.length &&
+          errores.map((error, i) => <Error key={i}>{error}</Error>)}
+
         <Form method="POST">
           <Formulario />
           <input
