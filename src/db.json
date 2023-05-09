@@ -1,0 +1,53 @@
+{
+  "clientes": [
+    {
+      "id": 1,
+      "nombre": "Juan",
+      "telefono": 3436030758,
+      "email": "juan@gmail.com",
+      "empresa": "Bichito de Looz"
+    },
+    {
+      "id": 2,
+      "nombre": "Karen",
+      "telefono": 3472502174,
+      "email": "karen@Yahoo.com",
+      "empresa": "Inpoolcor"
+    },
+    {
+      "id": 3,
+      "nombre": "Josue",
+      "telefono": 3472426911,
+      "email": "josue@hotmail.com",
+      "empresa": "Contigiani SRL"
+    },
+    {
+      "id": 4,
+      "nombre": "Miguel",
+      "telefono": 3436215488,
+      "email": "miguel@gmail.com",
+      "empresa": "La Peruana"
+    },
+    {
+      "id": 5,
+      "nombre": "Pedro",
+      "telefono": 3472625897,
+      "email": "pedro@Yahoo.com",
+      "empresa": "Bertoto Boglione"
+    },
+    {
+      "id": 6,
+      "nombre": "Matias",
+      "telefono": 3472554185,
+      "email": "mati69_lbt@hotmail.com",
+      "empresa": "LBT"
+    },
+    {
+      "id": 7,
+      "nombre": "Carolina",
+      "telefono": 3436115022,
+      "email": "langhicarolina@hotmail.com",
+      "empresa": "Integral Software"
+    }
+  ]
+}

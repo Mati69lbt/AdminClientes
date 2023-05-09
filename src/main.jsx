@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Errorpage from "./components/Errorpage";
 import Layout from "./components/Layout";
 import "./index.css";
 import Index, { loader as clientesloader } from "./pages/Index";
@@ -17,6 +18,7 @@ const router = createBrowserRouter([
         index: true,
         element: <Index />,
         loader: clientesloader,
+        errorElement: <Errorpage />,
       },
       {
         path: "/clientes/nuevo",
@@ -27,7 +29,8 @@ const router = createBrowserRouter([
   },
 ]);
 
-ReactDOM.createRoot(document.getElementById("root")).render(
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(
   <React.StrictMode>
     <RouterProvider router={router} />
   </React.StrictMode>
