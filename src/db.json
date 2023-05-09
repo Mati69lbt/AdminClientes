@@ -48,6 +48,14 @@
       "telefono": 3436115022,
       "email": "langhicarolina@hotmail.com",
       "empresa": "Integral Software"
+    },
+    {
+      "nombre": "Schweinsteiger",
+      "empresa": "Aleman",
+      "email": "Bast@mail.com",
+      "telefono": "3472658497",
+      "notas": "Bastas! ",
+      "id": 8
     }
   ]
 }
