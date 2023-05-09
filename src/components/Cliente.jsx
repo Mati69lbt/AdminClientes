@@ -1,4 +1,12 @@
-import { useNavigate } from "react-router-dom";
+import { Form, useNavigate, redirect } from "react-router-dom";
+import { eliminarCliente } from "../data/clientes";
+
+//un action para elimnar
+export async function action({ params }) {
+  await eliminarCliente(params.clienteId);
+  return redirect("/");
+}
+
 const Cliente = ({ cliente }) => {
   const navigate = useNavigate();
   const { nombre, empresa, email, telefono, id } = cliente;
@@ -26,12 +34,34 @@ const Cliente = ({ cliente }) => {
         >
           Editar
         </button>
-        <button
-          type="button"
-          className="text-red-600 hover:text-blue-700 uppercase font-bold text-xs"
+        <Form
+          method="POST"
+          action={`/clientes/${id}/eliminar`}
+          onSubmit={(e) => {
+            Swal.fire({
+              title: "Deseas Eliminar Este CLiente?",
+              text: "Lo Borraras Para Siempre!",
+              icon: "warning",
+              showCancelButton: true,
+              confirmButtonColor: "#3085d6",
+              cancelButtonColor: "#d33",
+              confirmButtonText: "Si, lo Deseo!",
+            }).then((result) => {
+              if (result.isConfirmed) {
+                Swal.fire("Eliminado!", "No lo Veras Mas.", "success");
+              } else {
+                e.preventDefault();
+              }
+            });
+          }}
         >
-          Eliminar
-        </button>
+          <button
+            type="submit"
+            className="text-red-600 hover:text-blue-700 uppercase font-bold text-xs"
+          >
+            Eliminar
+          </button>
+        </Form>
       </td>
     </tr>
   );

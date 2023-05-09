@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { action as eliminarCliente } from "./components/Cliente";
 import Errorpage from "./components/Errorpage";
 import Layout from "./components/Layout";
 import "./index.css";
@@ -36,6 +37,10 @@ const router = createBrowserRouter([
         loader: editarCLienteLoader,
         action: editarCLienteAction,
         errorElement: <Errorpage />,
+      },
+      {
+        path: "/clientes/:clienteId/eliminar",
+        action: eliminarCliente,
       },
     ],
   },

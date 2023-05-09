@@ -15,33 +15,11 @@
       "empresa": "Inpoolcor"
     },
     {
-      "nombre": "Jose Luis Act",
-      "empresa": "Contigiani SRL - Metalfor",
-      "email": "josue@hotmail.com",
-      "telefono": "3472426911",
-      "notas": "Act",
-      "id": 3
-    },
-    {
-      "id": 4,
-      "nombre": "Miguel",
-      "telefono": 3436215488,
-      "email": "miguel@gmail.com",
-      "empresa": "La Peruana"
-    },
-    {
       "id": 5,
       "nombre": "Pedro",
       "telefono": 3472625897,
       "email": "pedro@Yahoo.com",
       "empresa": "Bertoto Boglione"
-    },
-    {
-      "id": 6,
-      "nombre": "Matias",
-      "telefono": 3472554185,
-      "email": "mati69_lbt@hotmail.com",
-      "empresa": "LBT"
     },
     {
       "id": 7,
@@ -57,6 +35,14 @@
       "telefono": "3472658497",
       "notas": "Bastas! ",
       "id": 8
+    },
+    {
+      "nombre": "Matias",
+      "empresa": "La Barra del Turco",
+      "email": "mati69_lbt@hotmail.com",
+      "telefono": "3472554185",
+      "notas": "Excelente! ",
+      "id": 9
     }
   ]
 }
