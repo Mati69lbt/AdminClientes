@@ -15,11 +15,12 @@
       "empresa": "Inpoolcor"
     },
     {
-      "id": 3,
-      "nombre": "Josue",
-      "telefono": 3472426911,
+      "nombre": "Jose Luis Act",
+      "empresa": "Contigiani SRL - Metalfor",
       "email": "josue@hotmail.com",
-      "empresa": "Contigiani SRL"
+      "telefono": "3472426911",
+      "notas": "Act",
+      "id": 3
     },
     {
       "id": 4,
