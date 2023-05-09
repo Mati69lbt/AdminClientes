@@ -5,7 +5,6 @@ export async function obtenerClientes() {
   return resultado;
 }
 
-//hace una funcion de agregar clientes con los datos
 export async function agregarClientes(datos) {
   try {
     const respuesta = await fetch(import.meta.env.VITE_API_URL, {
@@ -19,4 +18,16 @@ export async function agregarClientes(datos) {
   } catch (error) {
     console.log(error);
   }
+}
+
+//editar cliente
+export async function obtenerCliente(id) {
+  const respuesta = await fetch(`${import.meta.env.VITE_API_URL}/${id}`);
+  const resultado = await respuesta.json();
+
+  return resultado;
+}
+
+export async function actualizarCliente(id, datos) {
+  console.log("id:", id, "datos:", datos);
 }
