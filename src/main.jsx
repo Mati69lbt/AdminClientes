@@ -14,6 +14,18 @@ import NuevoCliente, {
   action as nuevoClienteAction,
 } from "./pages/NuevoCliente";
 
+import { initializeApp } from "firebase/app";
+import { getDatabase, ref, set } from "firebase/database";
+import firebaseConfig from "./firebaseConfig";
+import db from "./db.json";
+
+const app = initializeApp(firebaseConfig);
+const database = getDatabase(app);
+
+db.clientes.forEach((cliente) => {
+  set(ref(database, `clientes/${cliente.id}`), cliente);
+});
+
 const router = createBrowserRouter([
   {
     path: "/",
