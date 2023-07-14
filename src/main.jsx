@@ -18,8 +18,9 @@ import { initializeApp } from "firebase/app";
 import { getDatabase, ref, set } from "firebase/database";
 import firebaseConfig from "./firebaseConfig";
 import db from "./db.json";
+import app from "./firebaseConfig";
 
-const app = initializeApp(firebaseConfig);
+// const appy = initializeApp(firebaseConfig);
 const database = getDatabase(app);
 
 db.clientes.forEach((cliente) => {
